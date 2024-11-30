@@ -1,0 +1,375 @@
+:root {
+    --tituloHeight: 40px;
+    --miRadio: 7px;
+    --color: rgba(51, 99, 51, 0.568);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background: url(../imagenes/fondo.jpeg) center/cover no-repeat;
+
+}
+
+#nombre {
+    display: flex;
+    background-color: var(--color);
+    position: fixed;
+    width: 100%;
+    height: var(--tituloHeight);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+h1 {
+    width: 90%;
+    color: aliceblue;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#CV {
+    width: 10%;
+    height: 70%;
+    color: rgb(68, 41, 41);
+    background-color: rgba(62, 100, 94, 0.952);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0.3%;
+    margin-right: 2%;
+    font-size: 25px;
+    padding: 0%;
+    border-radius: 7%;
+    text-wrap: nowrap;
+}
+
+#CV:hover {
+    color: beige;
+}
+
+#miDescripcion {
+    padding-top: calc(var(--tituloHeight) + 35px);
+    padding-bottom: 30px;
+    font-size: 120%;
+}
+
+#miDescripcion h2 {
+    color: rgb(34, 92, 50);
+    text-align: center;
+}
+
+
+/* filtros */
+#btnBuscar {
+    position: absolute;
+    top: 8%;
+    right: 1%;
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    background-color: rgba(195, 214, 214, 0.459);
+    background-image: url(../imagenes/lupa.webp);
+    background-position: center;
+    background-size: contain;
+    --tiempo: 0.5s;
+    transition: width var(--tiempo) ease, background-color var(--tiempo) ease, border-radius var(--tiempo) ease, height var(--tiempo) ease; 
+    animation: lupa 10s infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes lupa {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#btnBuscar:hover {
+    background-color: rgba(85, 116, 116, 0.527);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+#sectionTags {
+    position: relative;
+    background-color: rgb(216, 207, 207);
+    padding: 1%;
+    border-radius: 3%;
+    width: 90%;
+    margin-bottom: 3%;
+    animation: slideLeft 1s forwards;
+}
+
+@keyframes slideLeft {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 3%;
+    }
+}
+
+.inVisible {
+    display: none;
+
+}
+
+#sectionTags button {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    border: none;
+    border-radius: 10%;
+}
+
+
+#sectionTags input {
+
+
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5%;
+    margin-bottom: 1%;
+
+}
+
+.btnActivotrue {
+    background-color: rgb(168, 75, 75);
+    /* color: red; */
+}
+
+.btnActivofalse {
+    background-color: rgb(193, 188, 223);
+    color: rgb(21, 11, 78);
+}
+
+
+#carrusel {
+    max-width: 95%;
+    margin: 2.5%;
+}
+
+.noHayCards {
+    font-size: 40px;
+    background-color: var(--color);
+    text-wrap: wrap;
+    padding: 2%;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 2.5%;
+
+}
+
+article {
+    position: relative;
+    min-width: 350px;
+    max-width: 380px;
+    background-color: var(--color);
+
+    margin: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: var(--miRadio);
+    transition: 0.3s width;
+    min-height: 580px;
+    --t: 0.3s;
+    transition: background-color var(--t) ease, min-width var(--t) ease, height var(--t) ease, left var(--t) ease, top var(--t) ease;
+}
+
+article:hover {
+    background-color: rgb(93, 134, 93);
+    min-width: 360px;
+    height: 530px;
+    top: -5px;
+
+}
+
+.video {
+    border-top-left-radius: var(--miRadio);
+    border-top-right-radius: var(--miRadio);
+    width: 100%;
+    height: 230px;
+}
+
+.titulo {
+    background-color: var(--color);
+    text-align: center;
+}
+
+.datos {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4%;
+    overflow: hidden
+}
+
+.categoria {
+    text-align: right;
+    font-style: italic;
+}
+
+.fecha {
+    margin-bottom: 15px;
+}
+
+.repo {
+    display: flex;
+    padding-top: 23px;
+}
+
+
+.boton {
+    position: absolute;
+    width: 50%;
+    color: black;
+    font-size: 18px;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--color);
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 25%;
+    margin-bottom: 10%;
+    top: 92%;
+    transition: background-color 0.5s ease;
+}
+.boton:hover{
+    background-color: rgb(39, 61, 44);
+
+}
+
+#CVContainer {
+    width: 60%;
+    margin-top: 10%;
+    margin-left: 20%;
+    height: 140vw;
+    margin-bottom: 15%;
+    border-radius: 15px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color);
+}
+
+
+footer h3 {
+    color: white;
+    text-align: center;
+    margin: 8px;
+}
+
+footer h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.footerMas {
+    display: none;
+}
+
+.agrandarFooter {
+    animation: 1s footerAnm forwards;
+}
+
+.footerMas {
+    display: none;
+}
+
+@keyframes footerAnm {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 15%;
+
+    }
+}
+
+#wasapIcon {
+    position: fixed;
+    width: 65px;
+    z-index: 10;
+    right: 1%;
+    bottom: 2%;
+    transition: right 0.1s ease-in-out, width 0.1s ease-in-out;
+}
+
+#wasapIcon:hover {
+    right: 1.3%;
+    width: 80px;
+
+}
+
+@media only screen and (max-device-width: 500px) {
+    h1 {
+        font-size: 18px;
+        white-space: wrap;
+    }
+
+    #miDescripcion {
+        font-size: 70%;
+    }
+
+    #wasapIcon {
+        position: fixed;
+        width: 43px;
+        z-index: 10;
+        right: 2%;
+        bottom: 1.3%;
+    }
+
+    article {
+        position: relative;
+        min-width: 255px;
+        background-color: var(--color);
+
+        margin: 1px;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: var(--miRadio);
+        transition: 0.3s width;
+        height: 520px;
+        --t: 0.3s;
+        transition: background-color var(--t) ease, min-width var(--t) ease, height var(--t) ease, left var(--t) ease, top var(--t) ease;
+    }
+
+    #CVContainer {
+        width: 85%;
+        margin-top: 10%;
+        margin-left: 5%;
+        height: 140vw;
+        margin-bottom: 45%;
+    }
+
+    footer h3 {
+        width: 85%;
+        color: white;
+        text-align: center;
+        margin: 8px;
+    }
+
+    footer h1 {
+        width: 70%;
+        padding-left: 25px;
+        padding-top: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+}
