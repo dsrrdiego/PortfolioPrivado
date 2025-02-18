@@ -6,8 +6,9 @@ filtrar()
 function filtrosURL () {
   const params = new URLSearchParams(window.location.search)
   let filtros = params.get('filtro')
-  filtros = filtros.split(',')
-  tags = tags.map(t => ({ ...t, activo: filtros.includes(t.nombre) }))
+  // filtros = (filtros!='') ?filtros=filtros.split(','):filtros=filstros
+  if (filtros!=null) {filtros=filtros.split(',');
+  tags = tags.map(t => ({ ...t, activo: filtros.includes(t.nombre) }))}
 }
 
 function render (filtrados) {
