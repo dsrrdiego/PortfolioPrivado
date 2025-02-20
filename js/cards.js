@@ -9,7 +9,7 @@ let cards = [
         "repo": "https://github.com/dsrrdiego/agroprimusstock.git",
         "link": "",
         "linkTexto": "",
-        "tags": ['Android', 'web', 'app', 'aplication', 'linux','Excel','Firebase','push']
+        "tags": ['Android', 'web', 'app', 'aplication', 'linux','Excel','Firebase','push','SpringBoot','Java']
     },
     {
         "titulo": "API nombre no disponible al publico",
